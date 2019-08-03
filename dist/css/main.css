@@ -9,7 +9,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: black;
     transition: all 0.8s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
@@ -40,14 +40,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #040404;
+    background: #f2f2f2;
     list-style: none;
     transform: translate3d(100%, 0, 0);
     transition: all 0.8s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #111111;
+    background: white;
     transform: translate3d(-100%, 0, 0);
     transition: all 0.8s ease-out; }
     .menu-branding.show {
@@ -57,26 +57,26 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 2px #f7f8b2;
-      background-position: center; }
+      border: solid 2px #b2f8d5;
+      background-position: 41% 53%; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.8s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #f7f8b2; }
+      color: #b2f8d5; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
     font-size: 30px;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: black;
     text-decoration: none;
     transition: all 0.8s ease-out; }
     .menu .nav-link:hover {
-      color: #f7f8b2; }
+      color: #b2f8d5; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -90,16 +90,48 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(0, -100%, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(0, 100%, 0); }
+    .menu-branding .portrait {
+      background: url(../img/portrait.jpg);
+      width: 150px;
+      height: 150px;
+      background-position: 41% 53%; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
+
 * {
   box-sizing: border-box; }
 
 * ::selection {
-  color: #f7f8b2;
+  color: #b2f8d5;
   background: #ffffff; }
 
 body {
-  background: #111111;
-  color: white;
+  background: white;
+  color: black;
   height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
@@ -108,13 +140,13 @@ body {
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0%;
       right: 0;
       width: 100%;
       z-index: -1;
-      background: rgba(17, 17, 17, 0.9);
+      background: rgba(255, 255, 255, 0.9);
       height: 100%; }
 
 h1,
@@ -131,10 +163,10 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(22, 22, 22, 0.5); }
+    background: rgba(255, 255, 255, 0.5); }
 
 a {
-  color: #ffffff;
+  color: black;
   text-decoration: none; }
 
 header {
@@ -143,7 +175,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #f7f8b2; }
+  color: #b2f8d5; }
 
 main {
   padding: 4rem;
@@ -153,7 +185,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #f7f8b2;
+        color: #b2f8d5;
         transition: all 0.8s ease-out; }
   main#home {
     overflow: hidden; }

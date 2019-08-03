@@ -1,6 +1,6 @@
-$primary-color: rgb(17, 17, 17);
-$primary-font-color: rgb(255, 255, 255);
-$secondary-color: rgb(247, 248, 178);
+$primary-color: rgb(255, 255, 255);
+$primary-font-color: rgb(0, 0, 0);
+$secondary-color: rgb(178, 248, 213);
 $show-home-image: true;
 $home-image: url(../img/bg.jpg);
 $background-opacity: 0.9;
@@ -14,7 +14,7 @@ $background-opacity: 0.9;
       background-attachment: fixed;
       background-size: cover;
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0%;
         right: 0;
@@ -24,5 +24,26 @@ $background-opacity: 0.9;
         height: 100%;
       }
     }
+  }
+}
+
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
   }
 }

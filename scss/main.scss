@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 * {
   box-sizing: border-box;
 }
@@ -32,7 +33,7 @@ h3 {
   }
 }
 a {
-  color: #ffffff;
+  color: $primary-font-color;
   text-decoration: none;
 }
 

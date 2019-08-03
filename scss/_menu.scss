@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: #fff;
+    background: $primary-font-color;
     @include easeOut;
   }
 
@@ -88,7 +88,7 @@
       background: url("../img/portrait.jpg");
       border-radius: 50%;
       border: solid 2px $secondary-color;
-      background-position: center;
+      background-position: 41% 53%;
     }
   }
   .nav-item {
@@ -109,7 +109,7 @@
     font-size: 30px;
     padding: 1rem 0;
     font-weight: 300;
-    color: #fff;
+    color: $primary-font-color;
     text-decoration: none;
     @include easeOut;
 
@@ -124,3 +124,4 @@
     transition-delay: $x * 0.1s;
   }
 }
+
