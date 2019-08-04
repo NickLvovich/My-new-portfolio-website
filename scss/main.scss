@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-
 @import "scrollbar";
 * {
   box-sizing: border-box;
@@ -114,6 +113,54 @@ main {
   }
 }
 
+// work/project 
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    box-shadow: 0 0px 4px 0px $primary-font-color;
+    @include easeOut;
+
+    &:hover {
+      opacity: 0.5;
+      box-shadow: 0 0px 7px 0px  $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Button Styles 
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  @include easeOut;
+  
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    @include easeOut;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($secondary-color, 10);
+  color: set-text-color($primary-font-color);
+  
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($secondary-color, 10);
+  color: set-text-color($primary-color);
+  
+}
 #main-footer {
   text-align: center;
   padding: 1rem;
