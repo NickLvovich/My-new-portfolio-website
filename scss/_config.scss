@@ -1,6 +1,6 @@
 $primary-color: rgb(255, 255, 255);
 $primary-font-color: rgb(0, 0, 0);
-$secondary-color: rgb(178, 248, 213);
+$secondary-color: rgb(185, 178, 248);
 $show-home-image: true;
 $home-image: url(../img/bg.jpg);
 $background-opacity: 0.9;
@@ -26,7 +26,14 @@ $background-opacity: 0.9;
     }
   }
 }
-
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
 @mixin mediaSm {
   @media screen and (max-width: 500px) {
     @content;
