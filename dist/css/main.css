@@ -265,7 +265,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../dist/img/bg3.jpg), no-repeat;
+    background: url(../img/bg3.jpg), no-repeat;
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -291,7 +291,8 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem; }
+    padding: 0.2rem 1rem;
+    background: rgba(255, 255, 255, 0.5); }
 
 a {
   color: black;
