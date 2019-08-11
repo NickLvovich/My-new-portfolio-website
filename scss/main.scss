@@ -1,0 +1,204 @@
+@import "config";
+@import "menu";
+@import "scrollbar";
+@import "vapor-sun";
+@import "loader";
+@import "fade-in";
+@import "particles";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+* ::selection {
+  color: $secondary-color;
+  background: #ffffff;
+}
+body {
+  @include background;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  &.lg-heading {
+    font-size: 6rem;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    // background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+a {
+  color: $primary-font-color;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.text-secondary {
+  color: $secondary-color;
+}
+main {
+  padding: 4rem;
+  // height: 100%;
+  min-height: calc(100vh - 60px);
+
+  .icons {
+    margin-top: 1rem;
+    position: relative;
+    z-index: 100;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    width: 250px;
+    height: 250px;
+    background: url("dist/img/portrait.jpg");
+    border-radius: 50%;
+    border: solid 1px $secondary-color;
+    background-position: 41% 53%;
+    box-shadow: 0px 0px 7px 1px $secondary-color;
+    margin: 0 auto;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+  .job {
+    background: darken($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: 1px solid $secondary-color;
+  }
+}
+
+// work/project 
+
+.projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    box-shadow: 0 0px 4px 0px $primary-font-color;
+    @include easeOut;
+
+    &:hover {
+      opacity: 0.5;
+      box-shadow: 0 0px 7px 0px  $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Contact page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 2rem;
+    border: 1px $secondary-color solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+    
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($secondary-color);
+      
+      span {
+        color: set-text-color($secondary-color);
+      }
+    }
+  }
+}
+
+// Button Styles 
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  @include easeOut;
+  
+
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+    @include easeOut;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($secondary-color, 10);
+  color: set-text-color($primary-font-color);
+  
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($secondary-color, 10);
+  color: set-text-color($primary-color);
+  
+}
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: $primary-font-color;
+  height: 60px;
+}
+@import "mobile";

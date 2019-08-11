@@ -1,0 +1,97 @@
+$size: 30vw;
+$bg: rgb(255, 255, 255);
+
+input[type="checkbox"] {
+  display: none;
+
+  &:checked ~ label {
+    transform: translate(0, -0.65em);
+    padding-bottom: 0.65em;
+  }
+
+  &:checked ~ .loader {
+    background-color: #00ffff;
+    animation: hue-rotate 60s linear infinite 0s;
+  }
+
+  &:checked ~ .loader .container {
+    filter: blur(0.75vw) contrast(3);
+
+    & .sun {
+      background: radial-gradient(transparent 65%, #fd1 100%),
+        linear-gradient(#f53 0, #fd1 100%);
+      animation: initial;
+    }
+
+    & .band {
+      background-color: #5affff;
+    }
+  }
+}
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding-left: 0.1em;
+  font-size: 4em;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $bg;
+}
+
+.container {
+  position: relative;
+  height: $size;
+  width: $size;
+  overflow: hidden;
+}
+
+.sun {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: $size;
+  height: $size;
+  background: radial-gradient(transparent 65%, $secondary-color 100%),
+    linear-gradient(rgb(252, 203, 113) 0, $secondary-color 100%);
+  border-radius: 50%;
+  animation: hue-rotate 60s ease-in-out infinite 5s;
+}
+
+.band {
+  position: absolute;
+  bottom: $size/-5;
+  width: 100%;
+  height: 10%;
+  background: $bg;
+  animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0) scaleY(1);
+  }
+  100% {
+    transform: translateY($size * -0.8) scaleY(0);
+  }
+}
+
+@keyframes hue-rotate {
+  0% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}

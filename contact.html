@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Contact Me</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="dist/css/main.css" />
     <!-- Place your kit's code here -->
     <script src="https://kit.fontawesome.com/3056ad08d2.js"></script>
   </head>
-  <body>
+  <body class="preload">
+    <div class="loader">
+      <div class="container">
+        <div class="sun"></div>
+        <div class="band" style="animation-delay: -0s"></div>
+        <div class="band" style="animation-delay: -1s"></div>
+        <div class="band" style="animation-delay: -2s"></div>
+        <div class="band" style="animation-delay: -3s"></div>
+        <div class="band" style="animation-delay: -4s"></div>
+        <div class="band" style="animation-delay: -5s"></div>
+        <div class="band" style="animation-delay: -6s"></div>
+        <div class="band" style="animation-delay: -7s"></div>
+        <div class="band" style="animation-delay: -8s"></div>
+        <div class="band" style="animation-delay: -9s"></div>
+      </div>
+    </div>
     <header>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -44,7 +59,7 @@
         </ul>
       </nav>
     </header>
-    <main id="contact">
+    <main id="contact" class="fade-in">
       <h1 class="lg-heading">Contact<span class="text-secondary">Me</span></h1>
       <h2 class="sm-heading">
         This is how you can reach me...
@@ -73,6 +88,6 @@
     <footer id="main-footer">
       Copyright &copy; 2019
     </footer>
-    <script src="js/main.js"></script>
+    <script src="dist/js/main.js"></script>
   </body>
 </html>
