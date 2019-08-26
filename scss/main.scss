@@ -39,8 +39,9 @@ h3 {
   }
 }
 a {
-  color: $primary-font-color;
+  color: $secondary-color;
   text-decoration: none;
+  @include easeOut;
 }
 
 header {
@@ -101,6 +102,10 @@ main {
     grid-area: bio;
     font-size: 1.5rem;
     text-align: left;
+    
+    p{
+      padding: 10px 0;
+    }
   }
 
   .job-1 {
@@ -116,6 +121,10 @@ main {
     background: darken($primary-color, 5);
     padding: 0.5rem;
     border-bottom: 1px solid $secondary-color;
+    
+    .h3, h6, p {
+      padding: 5px 0;
+   }
   }
 }
 
@@ -157,10 +166,13 @@ main {
     &:hover {
       padding: 0.5rem 1.5rem;
       background: $secondary-color;
-      color: set-text-color($secondary-color);
-      
+      color: $primary-font-color;
+    
+      a:hover {
+        color:$primary-font-color;
+      }
       span {
-        color: set-text-color($secondary-color);
+        color: $primary-font-color;
       }
     }
   }

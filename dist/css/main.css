@@ -24,7 +24,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 0.96;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -53,19 +53,19 @@
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/portrait.jpg");
+      width: 280px;
+      height: 280px;
+      background: url(../img/portrait.jpg);
       border-radius: 50%;
-      border: solid 2px #b9b2f8;
-      background-position: 41% 53%; }
+      border: solid 2px #b2bdf8;
+      background-position: 48% 25%; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.8s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #b9b2f8; }
+      color: #b2bdf8; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -76,7 +76,7 @@
     text-decoration: none;
     transition: all 0.8s ease-out; }
     .menu .nav-link:hover {
-      color: #b9b2f8; }
+      color: #b2bdf8; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -94,7 +94,7 @@
   width: 5px; }
 
 ::-webkit-scrollbar-button {
-  background-color: #b9b2f8; }
+  background-color: #b2bdf8; }
 
 ::-webkit-scrollbar-track {
   background-color: #ffff; }
@@ -103,7 +103,7 @@
   background-color: #ffff; }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #b9b2f8; }
+  background-color: #b2bdf8; }
 
 ::-webkit-scrollbar-corner {
   background-color: #ffff; }
@@ -158,7 +158,7 @@ label {
   transform: translate(-50%, 0);
   width: 30vw;
   height: 30vw;
-  background: radial-gradient(transparent 65%, #b9b2f8 100%), linear-gradient(#fccb71 0, #b9b2f8 100%);
+  background: radial-gradient(transparent 65%, #b2bdf8 100%), linear-gradient(#fccb71 0, #b2bdf8 100%);
   border-radius: 50%;
   animation: hue-rotate 60s ease-in-out infinite 5s; }
 
@@ -255,7 +255,7 @@ label {
   padding: 0; }
 
 * ::selection {
-  color: #b9b2f8;
+  color: #b2bdf8;
   background: #ffffff; }
 
 body {
@@ -294,8 +294,9 @@ h3 {
     padding: 0.2rem 1rem; }
 
 a {
-  color: black;
-  text-decoration: none; }
+  color: #b2bdf8;
+  text-decoration: none;
+  transition: all 0.8s ease-out; }
 
 header {
   position: fixed;
@@ -303,7 +304,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #b9b2f8; }
+  color: #b2bdf8; }
 
 main {
   padding: 4rem;
@@ -315,7 +316,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #b9b2f8;
+        color: #b2bdf8;
         transition: all 0.8s ease-out; }
   main#home {
     overflow: hidden; }
@@ -333,14 +334,16 @@ main {
     height: 250px;
     background: url("dist/img/portrait.jpg");
     border-radius: 50%;
-    border: solid 1px #b9b2f8;
+    border: solid 1px #b2bdf8;
     background-position: 41% 53%;
-    box-shadow: 0px 0px 7px 1px #b9b2f8;
+    box-shadow: 0px 0px 7px 1px #b2bdf8;
     margin: 0 auto; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem;
     text-align: left; }
+    .about-info .bio p {
+      padding: 10px 0; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -350,7 +353,9 @@ main {
   .about-info .job {
     background: #f2f2f2;
     padding: 0.5rem;
-    border-bottom: 1px solid #b9b2f8; }
+    border-bottom: 1px solid #b2bdf8; }
+    .about-info .job .h3, .about-info .job h6, .about-info .job p {
+      padding: 5px 0; }
 
 .projects {
   display: grid;
@@ -362,7 +367,7 @@ main {
     transition: all 0.8s ease-out; }
     .projects img:hover {
       opacity: 0.5;
-      box-shadow: 0 0px 7px 0px #b9b2f8;
+      box-shadow: 0 0px 7px 0px #b2bdf8;
       transition: all 0.8s ease-out; }
 
 .boxes {
@@ -373,16 +378,18 @@ main {
   margin-top: 1rem; }
   .boxes div {
     font-size: 2rem;
-    border: 1px #b9b2f8 solid;
+    border: 1px #b2bdf8 solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
     transition: all 0.8s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #b9b2f8;
-      color: #000; }
+      background: #b2bdf8;
+      color: black; }
+      .boxes div:hover a:hover {
+        color: black; }
       .boxes div:hover span {
-        color: #000; }
+        color: black; }
 
 .btn, .btn-dark, .btn-light {
   display: inline-block;
@@ -391,16 +398,16 @@ main {
   margin-bottom: 0.3rem;
   transition: all 0.8s ease-out; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #b9b2f8;
+    background: #b2bdf8;
     color: #000;
     transition: all 0.8s ease-out; }
 
 .btn-dark {
-  background: #8f83f4;
+  background: #8395f4;
   color: #fff; }
 
 .btn-light {
-  background: #e4e1fc;
+  background: #e1e5fc;
   color: #000; }
 
 #main-footer {
@@ -444,7 +451,7 @@ main {
       background: url(../img/portrait.jpg);
       width: 150px;
       height: 150px;
-      background-position: 41% 53%; }
+      background-position: 43% 34%; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; } }
